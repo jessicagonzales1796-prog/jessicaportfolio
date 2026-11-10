@@ -1,0 +1,74 @@
+/* Brand palette and typography shared by every page. */
+:root {
+  --paper: #fff8f2;
+  --ink: #2b2328;
+  --berry: #672743;
+  --pink: #f3d4dc;
+  --line: #dcc2cb;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem/1.65 Inter, Arial, sans-serif;
+}
+.container { padding-inline: clamp(1.15rem, 4vw, 3rem); }
+a { color: var(--berry); }
+a:focus-visible, button:focus-visible { outline: 3px solid #863859; outline-offset: 4px; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, .wordmark { font-family: "Playfair Display", Georgia, serif; }
+h1 { font-size: clamp(3.25rem, 9vw, 8rem); line-height: .98; letter-spacing: -.065em; margin: .3em 0 .25em; }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.08; }
+em { color: var(--berry); font-weight: 500; }
+.skip { position: absolute; transform: translateY(-150%); z-index: 9; background: white; padding: .5rem; }
+.skip:focus { transform: none; }
+.eyebrow, figcaption { font-size: .74rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--berry); }
+.nav-wrap, .actions { display: flex; align-items: center; flex-wrap: wrap; gap: clamp(.75rem, 3vw, 1.8rem); }
+.nav-wrap { justify-content: space-between; padding-block: 1rem; }
+nav a, .wordmark { text-decoration: none; color: var(--ink); }
+nav a { font-size: .88rem; font-weight: 600; padding-block: .25rem; }
+nav a[aria-current], nav a:hover { color: var(--berry); text-decoration: underline; text-underline-offset: .45rem; }
+.wordmark { font-size: 1.2rem; }
+.wordmark span { color: var(--berry); padding-right: .25rem; }
+.hero { background: linear-gradient(130deg, var(--paper), #fae8ea); }
+.hero, .section-space { padding-block: clamp(3.25rem, 8vw, 7rem); }
+.hero-art { background: var(--pink); padding: clamp(1.2rem, 4vw, 2.8rem); border-radius: 52% 52% 1rem 1rem; }
+.hero-art img { width: 100%; max-width: 290px; margin-inline: auto; box-shadow: 0 14px 25px #67274324; transform: rotate(5deg); }
+figcaption { margin-top: 1rem; }
+.intro { max-width: 37rem; font-size: 1.12rem; }
+.actions { margin-top: 1.7rem; }
+.pill { display: inline-block; padding: .78rem 1.25rem; border-radius: 99px; background: var(--berry); color: white; text-decoration: none; font-weight: 600; }
+.pill:hover { background: #492037; color: white; }
+.text-link { text-underline-offset: .25rem; }
+.project-grid { margin-top: 2rem; }
+.art-button { display: grid; place-items: center; position: relative; width: 100%; border: 0; background: #f3e4e8; padding: 1.5rem; border-radius: 1rem; }
+.art-button:hover { background: var(--pink); }
+.art-button img { width: min(100%, 285px); box-shadow: 0 10px 20px #67274322; }
+.art-button span { position: absolute; right: .75rem; bottom: .75rem; background: var(--paper); color: var(--berry); border-radius: 50%; padding: .2rem .6rem; }
+dialog { max-width: min(94vw, 660px); max-height: 92vh; border: 1px solid var(--line); border-radius: 1rem; padding: 1rem; color: var(--ink); background: var(--paper); }
+dialog::backdrop { background: #251420cf; }
+dialog img { max-height: 70vh; width: auto; margin: auto; }
+.close-art { color: var(--berry); background: transparent; border: 1px solid var(--line); border-radius: 99px; padding: .3rem .7rem; margin-bottom: .75rem; }
+.entry { padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.entry h3 { font-size: 1.4rem; }
+.entry p, .note p { margin-bottom: 0; }
+.note { background: #fae8ea; border-radius: 1rem; padding: 1.3rem; margin-bottom: 1rem; }
+.note h2 { font-size: 1.8rem; }
+.email { margin-top: 1.2rem; overflow-wrap: anywhere; }
+.contact-page { min-height: 65vh; }
+.site-footer { border-top: 1px solid var(--line); font-size: .86rem; }
+@media (max-width: 575px) {
+  .hero-art img { max-width: 225px; }
+  .hero, .section-space { padding-block: 3rem; }
+}
+
+
+/* Restyle the Module 2.3 Bootstrap navbar for the portfolio palette. */
+#mainNav {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+#mainNav .nav-link { padding-block: .65rem; }
+#mainNav .navbar-toggler { background: var(--pink); }
+#mainNav .navbar-nav { gap: .3rem; }
